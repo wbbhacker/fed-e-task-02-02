@@ -11,6 +11,24 @@ module.exports = {
   module:{
     rules:[
       {
+        test:/.html$/,
+        use:{
+          loader: 'html-loader',
+          options:{
+            attrs:['img.src','a.href']
+          }
+        }
+      },
+      {
+        test:/.js$/,
+        use:{
+          loader: 'babel-loader',
+          options:{
+            presets:['@babel/preset-env']
+          }
+        }
+      },
+      {
         test:/.css$/,
         use:[
           'style-loader',
@@ -19,7 +37,13 @@ module.exports = {
       },
       {
         test:/.png$/,
-        use:'url-loader'
+        use:{
+          loader:'url-loader',
+          options:{
+            limit:10*1024
+          }
+        }
+        
       }
     ]
   }
