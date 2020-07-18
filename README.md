@@ -34,5 +34,5 @@
 
    **打包webpack 配置有**：
 
-   Tree shaking
+   Tree shaking、clean-wabpack-plugin、分包
 

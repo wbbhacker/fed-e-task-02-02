@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "echo \"请使用 Webpack Dev Server 实现此任务\"",
-    "build": "echo \"请使用 Webpack 实现此任务\"",
-    "lint": "echo \"请使用 ESLint 实现此任务\""
+    "serve": "./node_modules/.bin/webpack --env development",
+    "build": "./node_modules/.bin/webpack --env production",
+    "lint": "./node_modules/.bin/webpack --env lint"
   },
   "dependencies": {
     "@vue/cli-plugin-babel": "^4.4.6",
@@ -16,6 +16,7 @@
     "@babel/core": "^7.10.5",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.6.0",
     "eslint": "^7.4.0",
     "eslint-loader": "^4.0.2",
@@ -28,7 +29,8 @@
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.0.9"
   },
   "eslintConfig": {
     "root": true,
